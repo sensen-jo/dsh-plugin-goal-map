@@ -1,0 +1,99 @@
+{
+  "name": "dsh-plugin-goal-map",
+  "version": "0.2.0-beta.1",
+  "private": false,
+  "description": "Goal Map: a read-only goal-to-plan progress route and session mindmap for DeepSeek Harness",
+  "type": "module",
+  "main": "index.mjs",
+  "exports": {
+    ".": "./index.mjs",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.mjs",
+    "cordis.patch.yml",
+    "icon.svg",
+    "lib/client.js",
+    "lib/build-info.json",
+    "model.mjs",
+    "presentation.mjs",
+    "presentation.test.mjs",
+    "mindmap.mjs",
+    "mindmap.test.mjs",
+    "mindmap-ui.mjs",
+    "progress.mjs",
+    "progress.test.mjs",
+    "progress-ui.mjs",
+    "client-ui.mjs",
+    "client.css",
+    "build.mjs",
+    "validate-package.mjs",
+    "model.test.mjs",
+    "package.test.mjs",
+    "README.md",
+    "PRIVACY.md",
+    "COMPATIBILITY.md",
+    "CHANGELOG.md",
+    "RELEASING.md",
+    "LICENSE"
+  ],
+  "icon": "./icon.svg",
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "goal-map",
+    "mindmap",
+    "progress",
+    "read-only"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "tag": "beta",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "engines": {
+    "node": ">=24",
+    "dsh": "0.2.0-rc.2"
+  },
+  "peerDependencies": {
+    "@deepseek-ai/dsh": "0.2.0-rc.2"
+  },
+  "peerDependenciesMeta": {
+    "@deepseek-ai/dsh": {
+      "optional": true
+    }
+  },
+  "dsh": {
+    "manifestVersion": 1,
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-conversation",
+        "@deepseek-ai/dsh-client-ui-session",
+        "@deepseek-ai/dsh-client-connection"
+      ]
+    }
+  },
+  "scripts": {
+    "build": "node build.mjs",
+    "check:build": "node build.mjs --check",
+    "test": "node --test model.test.mjs presentation.test.mjs mindmap.test.mjs progress.test.mjs package.test.mjs",
+    "validate": "node validate-package.mjs",
+    "check:release": "node validate-package.mjs --release",
+    "prepack": "npm run check:build && npm test && npm run validate"
+  },
+  "license": "MIT",
+  "author": "sensenzi",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sensen-jo/dsh-plugin-goal-map.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sensen-jo/dsh-plugin-goal-map/issues"
+  },
+  "homepage": "https://github.com/sensen-jo/dsh-plugin-goal-map#readme"
+}

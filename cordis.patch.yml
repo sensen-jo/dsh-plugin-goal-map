@@ -1,0 +1,3 @@
+- insert:
+    - id: goal-map
+      name: dsh-plugin-goal-map
