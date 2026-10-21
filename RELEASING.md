@@ -1,8 +1,8 @@
-# Publication preparation
+# Publication status and future releases
 
-Goal Map `0.2.0-beta.1` (`dsh-plugin-goal-map`) is **prepared for publication, not yet published**. Author: **sensenzi**. The selected public license is **MIT**, Copyright (c) 2026 sensenzi; its complete grant and disclaimer are in [LICENSE](<LICENSE>). The package declares `private:false` and explicitly includes that license in its 27-file npm allowlist.
+Goal Map `0.2.0-beta.1` (`dsh-plugin-goal-map`) has **public source published on GitHub**. Author: **sensenzi**. The selected public license is **MIT**, Copyright (c) 2026 sensenzi; its complete grant and disclaimer are in [LICENSE](<LICENSE>). The package declares `private:false` and explicitly includes that license in its 27-file npm allowlist.
 
-Selected repository: [sensen-jo/dsh-plugin-goal-map](https://github.com/sensen-jo/dsh-plugin-goal-map). Selected issue destination: [GitHub Issues](https://github.com/sensen-jo/dsh-plugin-goal-map/issues). These are publication destinations; the repository contents and installation URL have not yet been published or verified. No npm publication or marketplace acceptance is claimed.
+Selected repository: [sensen-jo/dsh-plugin-goal-map](https://github.com/sensen-jo/dsh-plugin-goal-map). Selected issue destination: [GitHub Issues](https://github.com/sensen-jo/dsh-plugin-goal-map/issues). The public `main` source commit `4df3c85d2ea1d41ee9d5500f99f0f4254f8d3209` was downloaded through GitHub ZIP and all 32 files matched the reviewed bytes. The [1024 Store community listing](https://deepseek1024.com/plugins/sensen-jo/dsh-plugin-goal-map) is live; [catalog PR #657](https://github.com/imsai-sh/awesome-deepseek-harness-plugins/pull/657) passed static review and was merged. npm is not published; the catalog is browse-only. The production catalog write succeeded; a subsequent upstream generated-README refresh failed while fetching the catalog API. This does not prevent the verified live listing. Git clone installation and human runtime acceptance are not claimed.
 
 ## Local preparation
 
@@ -12,11 +12,11 @@ Run the dependency-free build, build check, Node tests, local validation and `np
 
 The release-gate tests cover complete public metadata and real relocated packages with missing license metadata, missing full license text, missing author, missing repository and `private:true`. Relocated builds copy all non-client entries from the explicit allowlist, including [LICENSE](<LICENSE>).
 
-## Before publication
+## For later npm or source releases
 
 1. Check the final package identity, registry name availability and repository control in the owner's trusted publication environment.
 2. Review the final inventory and runtime hashes; retain the exact DSH `0.2.0-rc.2` engine and optional peer. Complete any separately required host/install review against that exact final candidate.
-3. Publish the reviewed repository contents at the selected GitHub destination, verify the repository root bundle installation, then add a confirmed Git URL installation instruction to the [README](<README.md>).
+3. Keep the public repository root as the plugin bundle root. Download ZIP and local-directory installation are documented in the [README](<README.md>); verify a Git clone installation before claiming that route tested.
 4. If distributing through npm, inspect the actual pack result and publish the reviewed `0.2.0-beta.1` artifact with the `beta` tag. The explicit allowlist excludes the screenshot directory and Git helper files.
 5. Follow the selected market's actual submission/manifest rules. Verify publication receipts and a listing URL separately; an installable package alone does not establish market acceptance.
 

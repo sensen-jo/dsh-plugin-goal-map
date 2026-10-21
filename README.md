@@ -2,10 +2,10 @@
 
 一眼查看目标、AI 做到哪里，以及计划中还差哪些步骤。为 DeepSeek Harness Web 提供只读的目标进展路线、思维导图和步骤列表。
 
-**0.2.0-beta.1 · 准备发布。** 包名为 `dsh-plugin-goal-map`，作者为 **sensenzi**，采用 **MIT** 许可，Copyright (c) 2026 sensenzi。完整授权见 [LICENSE](<LICENSE>)。公开元数据已准备，npm、GitHub 仓库内容及插件市场条目尚未发布或验收。
+**0.2.0-beta.1 · 已公开源码。** 包名为 `dsh-plugin-goal-map`，作者为 **sensenzi**，采用 **MIT** 许可，Copyright (c) 2026 sensenzi。完整授权见 [LICENSE](<LICENSE>)。源码已公开到 GitHub，[1024 Store 社区市场条目](https://deepseek1024.com/plugins/sensen-jo/dsh-plugin-goal-map) 已实际可见，[PR #657](https://github.com/imsai-sh/awesome-deepseek-harness-plugins/pull/657) 已通过静态检查并合并；尚未发布 npm，目录安装标签为仅浏览。静态收录不代表插件运行验收。
 
-- 准备发布的仓库：[sensen-jo/dsh-plugin-goal-map](https://github.com/sensen-jo/dsh-plugin-goal-map)。
-- 准备使用的问题地址：[GitHub Issues](https://github.com/sensen-jo/dsh-plugin-goal-map/issues)。仓库内容公开后该入口方可作为公开问题渠道使用；准备阶段请联系提供候选包的维护者。
+- 公开仓库：[sensen-jo/dsh-plugin-goal-map](https://github.com/sensen-jo/dsh-plugin-goal-map)。
+- 问题反馈：[GitHub Issues](https://github.com/sensen-jo/dsh-plugin-goal-map/issues)。可在仓库 Issues 描述问题，避免公开真实会话或敏感目标文本。
 - 仅声明已验证的 **DSH Web 0.2.0-rc.2**；构建与测试需要 **Node.js >=24**。
 
 ## 能看到什么
@@ -46,13 +46,13 @@
 
 ## 安装和使用
 
-当前为准备发布的候选，没有已经可用的 npm 发布入口。上面的 GitHub 地址是确定的发布目标，仓库内容尚未发布，因此此处不提供已可用的 Git URL 安装指令。
+当前提供 GitHub 源码与目录浏览入口，尚未发布 npm。请从仓库 **Code → Download ZIP** 下载并解压，或使用维护者提供的经核对 tarball。市场收录本身不提供 npm 安装命令。
 
-1. 从维护者取得完整候选目录或经核对的 tarball。仓库根目录即插件包根目录，包含 [插件入口](<index.mjs>)、[bundle 补丁](<cordis.patch.yml>) 和 [预构建客户端](<lib/client.js>)，不需要寻找内部子目录。
+1. 打开解压后的完整源码目录或使用经核对的 tarball。仓库根目录即插件包根目录，包含 [插件入口](<index.mjs>)、[bundle 补丁](<cordis.patch.yml>) 和 [预构建客户端](<lib/client.js>)，不需要寻找内部子目录。
 2. 在 DSH 的 **插件 → 添加插件** 中填写该本地目录或 tarball 的绝对路径，按宿主提示启用并刷新页面。
 3. 进入一个非空会话顶部的 **流程图 → 总览图**，也可使用 **步骤列表**。当前界面使用中文标签。
 
-仓库正式公开并验证 Git 来源安装后，再补充经过确认的 Git URL 安装说明；npm 发布后再补充固定版本指令。DSH 支持 npm、Git 来源、tarball 与本地目录，具体权限由宿主管理。
+已核公开 main 首提交 ZIP 的全部 32 个文件与审阅源码一致；同版本 27 文件 tarball 经隔离安装、禁用和卸载验证。当前不宣称 Git clone 来源安装已实测；npm 发布后再补充固定版本指令。DSH 支持 npm、Git 来源、tarball 与本地目录，具体权限由宿主管理。
 
 已有开发版会话流程图时，先在插件页禁用旧开发 bundle，再启用本包；两者复用同一视图目标，不应同时启用。禁用/卸载在插件页完成。插件不会删除聊天或保存自己的业务数据。升级遵循宿主插件管理流程，不承诺自动更新。
 
@@ -72,7 +72,7 @@
 
 功能基线经源码、实际 SDK 合成会话、宽窄栏/深色/放大字号与离线安装生命周期验证。这些历史基线检查不替代真人登录、读屏器或生产发送验收；本次公开元数据准备也不宣称新增浏览器或宿主验证。
 
-## 开发与发布准备
+## 开发与后续发行
 
 零新增运行依赖，React 由宿主提供。包自带源码、测试和可重复构建：
 
@@ -91,8 +91,8 @@ npm pack --dry-run --json
 
 Goal Map adds a read-only goal-to-plan route, session mindmap and step list to DeepSeek Harness Web. Follow the structured goal, declared completed/current steps and unfinished plan items without starting another model or scheduler. Progress measures equal-weight declared plan items, not acceptance or effort. Missing, historical, stale, invalid or truncated plans do not receive a percentage.
 
-**Version 0.2.0-beta.1 is being prepared for publication.** Package: `dsh-plugin-goal-map`. Author: **sensenzi**. License: **MIT**, Copyright (c) 2026 sensenzi; see the complete [license](<LICENSE>). The selected repository is [sensen-jo/dsh-plugin-goal-map](https://github.com/sensen-jo/dsh-plugin-goal-map), with [issues](https://github.com/sensen-jo/dsh-plugin-goal-map/issues) available after publication. Repository contents, npm release and marketplace listing are not yet published or accepted. No working Git URL installation command is claimed.
+**Version 0.2.0-beta.1 source is public.** Package: `dsh-plugin-goal-map`. Author: **sensenzi**. License: **MIT**, Copyright (c) 2026 sensenzi; see the complete [license](<LICENSE>). The selected repository is [sensen-jo/dsh-plugin-goal-map](https://github.com/sensen-jo/dsh-plugin-goal-map), with [issues](https://github.com/sensen-jo/dsh-plugin-goal-map/issues) available. The [1024 Store community listing](https://deepseek1024.com/plugins/sensen-jo/dsh-plugin-goal-map) is live; [catalog PR #657](https://github.com/imsai-sh/awesome-deepseek-harness-plugins/pull/657) passed static review and was merged. npm is not published, so the catalog is browse-only. Static catalog admission is not runtime acceptance. Git clone installation is not claimed tested.
 
-For the current candidate, obtain the reviewed complete local directory or tarball and add its absolute path through **Plugins → Add plugin**. The repository root is the plugin root and includes its patch and built client, ready to serve as the Git bundle root once the repository is published and verified. Enable it, refresh the page and open **流程图 → 总览图** in a non-empty session. Disable an older development Session Flow bundle first. Refresh reads metadata only; disable or uninstall through the host plugin manager.
+Download **Code → Download ZIP** from the public repository, extract it, or obtain the reviewed tarball, then add the complete directory or tarball absolute path through **Plugins → Add plugin**. The repository root is the plugin root and includes its patch and built client, at the verified public source location. Enable it, refresh the page and open **流程图 → 总览图** in a non-empty session. Disable an older development Session Flow bundle first. Refresh reads metadata only; disable or uninstall through the host plugin manager.
 
 The three linked screenshots above are copied **synthetic alpha7 examples**, not real conversations or newly captured beta.1 screenshots. They are kept in the repository for documentation and excluded from the npm allowlist. The tested scope remains **DSH Web 0.2.0-rc.2, host React 18.3.1 and Chromium**; development requires **Node.js >=24**. Other versions and browsers are unverified. Public goal/plan text and labels may contain sensitive material and are not automatically redacted. See [privacy](<PRIVACY.md>), [compatibility](<COMPATIBILITY.md>) and [releasing](<RELEASING.md>) for the exact boundaries.
