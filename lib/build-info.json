@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
   "package": "dsh-plugin-goal-map",
-  "version": "0.2.0-beta.1",
-  "clientBytes": 137550,
-  "sha256": "547b508dd492b8b8ee49347732ea28276ec5a19f9921685a022a9f1d1d12df59",
+  "version": "0.2.0-beta.2",
+  "clientBytes": 137579,
+  "sha256": "c637b4556388d80797c9fba4a3c298b27418125a860f1146cec49719bc78f435",
   "sources": {
     "model.mjs": "e2d6787e3ed6077972b39780bf400d08ade6c33c92a8befb2a8f8ddee9f53f69",
     "presentation.mjs": "3873e2d6be576a7afc502f77454c1a855d1da18a73cf57805f06457074a04c4f",
@@ -12,7 +12,7 @@
     "progress-ui.mjs": "0a1f414f8277c0a325a7902bcc5136efa1a62de51d4f5c51122acbc08f187444",
     "mindmap-ui.mjs": "31e04252946d44855ec4f33e97686d6d0103932cbcf7b16cfa151d4f3aa0f9e6",
     "client-ui.mjs": "04609b60cc3b5999da535b04683b882eb5085da48dd1b8777057d0b34b0425b2",
-    "client.css": "2f883a885f74f244abd8bcd6c03f27157735b81c553ab72c99ae7e35429cc5ed"
+    "client.css": "e7cb6268a4e5072b4364e8dc974bb1f6d3e3d215c721a9c78726fa5befc162ac"
   },
   "syntax": "passed",
   "runtimeExternals": [

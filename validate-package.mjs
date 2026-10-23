@@ -12,8 +12,9 @@ export function validatePackage(root=new URL('./',import.meta.url),{release=fals
   require(manifest.dsh?.manifestVersion===1,'Manifest version must be explicit');
   require(manifest.dsh?.client?.platform==='web','Web platform declaration missing');
   require(manifest.dsh?.bundle?.patch==='./cordis.patch.yml','Bundle patch path differs');
-  require(manifest.engines?.dsh==='0.2.0-rc.2','Only tested host version may be declared compatible');
-  require(manifest.peerDependencies?.['@deepseek-ai/dsh']==='0.2.0-rc.2','Tested rc.2 host enforces DSH peers, not engines.dsh alone');
+  const testedHosts='0.2.0-rc.2 || 0.2.1-rc.2';
+  require(manifest.engines?.dsh===testedHosts,'Only explicitly tested host versions may be declared compatible');
+  require(manifest.peerDependencies?.['@deepseek-ai/dsh']===testedHosts,'Tested hosts enforce DSH peers, not engines.dsh alone');
   require(manifest.peerDependenciesMeta?.['@deepseek-ai/dsh']?.optional===true,'DSH host peer must not trigger another host installation');
   require(Array.isArray(manifest.files) && manifest.files.length>0,'An explicit packaging allowlist is required');
   const packageDirectory=realpathSync(root),seenFiles=new Set();

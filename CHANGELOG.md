@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.2.0-beta.2 — DSH 0.2.1-rc.2 compatibility candidate
+
+- Add the finite host union `0.2.0-rc.2 || 0.2.1-rc.2` to both the DSH engine and optional host peer; do not admit untested future versions.
+- Keep the beta.1 model and read-only behavior. In narrow conversation columns, reserve the settings row before opening it to avoid moving the focused summary during reflow. Require browser verification of this candidate layout change. Do not change host styles or hide controls. Keep MIT and no extra model, scheduler or server.
+- Update validation and release documentation; require new-host actual SDK, isolated official CLI/Loader and browser checks before publication. Publication and market listing require separate receipts.
+
 ## 0.2.0-beta.1 — preparing for publication
 
 - Prepare Goal Map / 目标进展图 as `dsh-plugin-goal-map`, author **sensenzi**, with MIT licensing and Copyright (c) 2026 sensenzi. Include the complete [LICENSE](<LICENSE>) in the explicit 27-file npm allowlist and set `private:false`.
@@ -65,7 +71,7 @@
 - Deterministic package-local build and provenance metadata; offline validation, explicit tarball allowlist and private release gate.
 - Self-contained installation, compatibility, privacy and release documentation.
 
-The historical private-candidate entries above describe earlier preparation states. The current beta.1 candidate grants MIT rights through [LICENSE](<LICENSE>); no published repository contents, npm release or marketplace acceptance is claimed.
+The beta.1 and private-candidate notes above describe their historical preparation states. Beta.1 subsequently reached public GitHub source and npm publication. Current MIT rights are granted by [LICENSE](<LICENSE>). Beta.2 publication and the configured market's acceptance require their own verification.
 
 ## 0.1.0 — local prototype
 

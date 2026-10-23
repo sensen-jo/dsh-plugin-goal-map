@@ -1,6 +1,6 @@
 {
   "name": "dsh-plugin-goal-map",
-  "version": "0.2.0-beta.1",
+  "version": "0.2.0-beta.2",
   "private": false,
   "description": "Goal Map: a read-only goal-to-plan progress route and session mindmap for DeepSeek Harness",
   "type": "module",
@@ -54,10 +54,10 @@
   },
   "engines": {
     "node": ">=24",
-    "dsh": "0.2.0-rc.2"
+    "dsh": "0.2.0-rc.2 || 0.2.1-rc.2"
   },
   "peerDependencies": {
-    "@deepseek-ai/dsh": "0.2.0-rc.2"
+    "@deepseek-ai/dsh": "0.2.0-rc.2 || 0.2.1-rc.2"
   },
   "peerDependenciesMeta": {
     "@deepseek-ai/dsh": {
